@@ -16,3 +16,8 @@ spring:
     url: jdbc:mysql://localhost:3306/automotriz
     username: root
     password:
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:9090/eureka}
+
