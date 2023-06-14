@@ -1,0 +1,74 @@
+server:
+  port: 8120
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8110/eureka}
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: automotriz-service
+          uri: lb://automotriz-service
+          predicates:
+            - Path=/automotriz/**
+        - id: bano-service
+          uri: lb://bano-service
+          predicates:
+            - Path=/bano/**
+        - id: cocina-service
+          uri: lb://cocina-service
+          predicates:
+            - Path=/cocina/**
+        - id: construccion-service
+          uri: lb://construccion-service
+          predicates:
+            - Path=/construccion/**
+        - id: deporte-service
+          uri: lb://deporte-service
+          predicates:
+            - Path=/deporte/**
+        - id: dormitorio-service
+          uri: lb://dormitorio-service
+          predicates:
+            - Path=/dormitorio/**
+        - id: electricidad-service
+          uri: lb://electricidad-service
+          predicates:
+            - Path=/electricidad/**
+        - id: electrohogar-service
+          uri: lb://electrohogar-service
+          predicates:
+            - Path=/electrohogar/**
+        - id: ferreteria-service
+          uri: lb://ferreteria-service
+          predicates:
+            - Path=/ferreteria/**
+        - id: herramienta-service
+          uri: lb://herramienta-service
+          predicates:
+            - Path=/herramienta/**
+        - id: iluminacion-service
+          uri: lb://iluminacion-service
+          predicates:
+            - Path=/iluminacion/**
+        - id: jardineria-service
+          uri: lb://jardineria-service
+          predicates:
+            - Path=/jardineria/**
+        - id: mueble-service
+          uri: lb://mueble-service
+          predicates:
+            - Path=/mueble/**
+        - id: oficina-service
+          uri: lb://oficina-service
+          predicates:
+            - Path=/oficina/**
+        - id: tecnologia-service
+          uri: lb://tecnologia-service
+          predicates:
+            - Path=/tecnologia/**
+
