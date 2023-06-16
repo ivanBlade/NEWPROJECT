@@ -12,11 +12,11 @@ public class Automotriz {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String Producto;
-    private String Marca;
-    private String Descripcion;
-    private String Color;
-    private Double Precio;
-    private Double Peso;
+    private String producto;
+    private String marca;
+    private String descripcion;
+    private String color;
+    private Double precio;
+    private Double peso;
 
 }
