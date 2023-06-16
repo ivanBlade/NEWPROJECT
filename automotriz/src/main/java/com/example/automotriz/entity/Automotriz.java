@@ -14,10 +14,9 @@ public class Automotriz {
     private Integer id;
     private String Producto;
     private String Marca;
-    private String Modelo;
     private String Descripcion;
     private String Color;
-    private String Precio;
-    private String Peso;
+    private Double Precio;
+    private Double Peso;
 
 }
